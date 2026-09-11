@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.1.0 - Public name/package migration candidate
+## 1.1.0 - Accepted public release
 
 - Renames the public mod to **Rain & Wind Volume Controls**.
 - Renames the project/assembly/DLL to `RainWindVolumeControls`.
