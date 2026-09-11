@@ -14,15 +14,17 @@
 - **User result:** works as intended.
 - **Result:** **accepted**.
 
-## 1.1.0 - Public name/package migration candidate
+## 1.1.0 - Accepted public name/package migration
 
 - **Goal:** move the accepted mod into the clean public `RainWindVolumeControls` repository under the name **Rain & Wind Volume Controls**.
 - **Changed:** repository/project/assembly/DLL/plugin display name and namespace/class naming; version advanced to 1.1.0.
 - **Preserved:** BepInEx GUID `rainwind.gyk.volume.control`, config keys/defaults/ranges, weather sound IDs, runtime patch target, event-driven live-apply behavior.
-- **Not intended to change:** rain/wind volume behavior, weather visuals, gameplay, save data, unrelated audio, or steady-state performance.
-- **Source basis:** accepted legacy 1.0.1 behavior documented above.
+- **Not changed:** rain/wind multiplier logic, weather visuals, gameplay, save data, unrelated audio, or steady-state performance.
+- **Source equivalence check:** compared accepted legacy 1.0.1 source with 1.1.0. After normalizing the renamed namespace/class/plugin display name and version string, the runtime implementation is unchanged. Project target/framework/compiler settings and package dependencies are likewise unchanged apart from project/assembly/source names.
 - **Source commit:** `f27c489075b7091d41a04609303b91995fdcfcef`.
+- **Accepted freeze:** `baseline/1.1.0-accepted` at the same source commit.
 - **CI:** public GitHub Actions run `34611974218` succeeded on `windows-latest`; artifact `RainWindVolumeControls-1.1.0` (`10268822659`).
-- **Built DLL SHA-256:** `aa422a7ebe16071c6bd45d7fd6590149953aa2cdd235a6e67b6a4fb8aadb9a28`.
-- **Requested smoke test:** install only `Rain & Wind Volume Controls 1.1.0.dll`, confirm F1 shows Rain Volume (%) and Wind Volume (%), then verify both rain and wind change immediately while active.
-- **Result:** **clean build passed; pending smoke test**.
+- **Accepted DLL SHA-256:** `aa422a7ebe16071c6bd45d7fd6590149953aa2cdd235a6e67b6a4fb8aadb9a28`.
+- **User smoke test:** the new DLL loaded in Graveyard Keeper and Configuration Manager displayed both **Rain Volume (%)** and **Wind Volume (%)** controls.
+- **Weather retest:** not repeated because rain/wind are irregular runtime events and the weather-control implementation itself was verified source-equivalent to the already accepted 1.0.1 behavior.
+- **Result:** **accepted**.
