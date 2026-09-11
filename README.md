@@ -32,7 +32,7 @@ Launch the game and press **F1** to adjust **Rain Volume (%)** and **Wind Volume
 
 ## Status
 
-Current test build: **1.1.0**.
+Current stable version: **1.1.0**.
 
 ## Development
 
