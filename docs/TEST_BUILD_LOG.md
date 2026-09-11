@@ -21,6 +21,8 @@
 - **Preserved:** BepInEx GUID `rainwind.gyk.volume.control`, config keys/defaults/ranges, weather sound IDs, runtime patch target, event-driven live-apply behavior.
 - **Not intended to change:** rain/wind volume behavior, weather visuals, gameplay, save data, unrelated audio, or steady-state performance.
 - **Source basis:** accepted legacy 1.0.1 behavior documented above.
-- **Build:** pending clean public CI from `dev/1.1.0`.
-- **Requested smoke test after successful build:** install only the new DLL, confirm F1 shows Rain Volume (%) and Wind Volume (%), then verify both rain and wind change immediately while active.
-- **Result:** **pending build/smoke test**.
+- **Source commit:** `f27c489075b7091d41a04609303b91995fdcfcef`.
+- **CI:** public GitHub Actions run `34611974218` succeeded on `windows-latest`; artifact `RainWindVolumeControls-1.1.0` (`10268822659`).
+- **Built DLL SHA-256:** `aa422a7ebe16071c6bd45d7fd6590149953aa2cdd235a6e67b6a4fb8aadb9a28`.
+- **Requested smoke test:** install only `Rain & Wind Volume Controls 1.1.0.dll`, confirm F1 shows Rain Volume (%) and Wind Volume (%), then verify both rain and wind change immediately while active.
+- **Result:** **clean build passed; pending smoke test**.
