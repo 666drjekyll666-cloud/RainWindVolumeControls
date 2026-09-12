@@ -33,7 +33,10 @@ This public repository contains only redistributable project material: our sourc
 - Every numbered DLL handed to the user is immutable and tied to exact source.
 - `docs/TEST_BUILD_LOG.md` is the durable test-build record.
 - Public stable binaries are published through GitHub Releases after acceptance.
-- The user prefers a ready raw, versioned DLL, not a ZIP.
+- For development/test handoff, the user prefers a ready raw versioned DLL such as `Rain & Wind Volume Controls 1.2.0.dll`, not a ZIP.
+- For end-user installation and public distribution surfaces such as Nexus, the canonical installed filename is `RainWindVolumeControls.dll` with no version in the filename; version identity belongs in plugin metadata and the surrounding release/store entry.
+- A filename-only rename of an already accepted DLL for public packaging is allowed only when the bytes are unchanged and the accepted SHA-256 still matches.
+- Existing historical releases do not need retroactive repackaging solely to adopt the stable installed filename convention.
 
 ## CI policy for this repository
 
